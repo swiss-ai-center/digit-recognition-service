@@ -34,6 +34,7 @@ class MyService(Service):
 
     # Any additional fields must be excluded for Pydantic to work
     model: object = Field(exclude=True)
+    logger: object = Field(exclude=True)
 
     def __init__(self):
         super().__init__(
@@ -57,7 +58,7 @@ class MyService(Service):
             ],
             has_ai=True
         )
-
+        self.logger = get_logger(settings)
         self.model = models.load_model(os.path.join(os.path.dirname(__file__), "..", "mnist_model.h5"))
 
     def process(self, data):
