@@ -56,7 +56,8 @@ class MyService(Service):
                     acronym=ExecutionUnitTagAcronym.IMAGE_RECOGNITION
                 ),
             ],
-            has_ai=True
+            has_ai=True,
+            docs_url="https://docs.swiss-ai-center.ch/reference/services/digit-recognition/",
         )
         self._logger = get_logger(settings)
         self._model = models.load_model(os.path.join(os.path.dirname(__file__), "..", "mnist_model.h5"))
