@@ -1,6 +1,5 @@
 services:
   service:
-    container_name: digit-recognition-service
     build:
       context: .
       dockerfile: development.Dockerfile
