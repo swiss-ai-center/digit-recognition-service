@@ -68,7 +68,7 @@ class MyService(Service):
         # Convert to image object
         image = cv2.imdecode(np.frombuffer(raw, np.uint8), cv2.IMREAD_GRAYSCALE)
         # Get the shape of the model
-        shape = self.model.input.shape[1]
+        shape = self._model.input_shape[1]
         # Compute the size
         size = int(np.sqrt(shape))
         # Resize the image to the size of the model
@@ -78,7 +78,7 @@ class MyService(Service):
         # Reshape the image
         flattened = np.reshape(normalized, [-1, shape])
         # Predict the image
-        prediction = self.model.predict(flattened)
+        prediction = self._model.predict(flattened)
         # Get the index of the highest probability
         guessed = np.argmax(prediction)
 
