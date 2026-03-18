@@ -1,6 +1,17 @@
 [project]
 name = "digit-recognition-model-creation"
+version = "1.0.0"
 
+requires-python = "==3.10.*"
+dependencies = [
+    "dvc[s3]==3.67.0",
+    "flake8==7.0.0",
+    "matplotlib==3.8.3",
+    "numpy==1.26.4",
+    "pandas==2.2.1",
+    "tensorflow==2.16.1"
+
+]
 [tool.pytest.ini_options]
 pythonpath = [".", "src"]
 addopts = "--cov-config=.coveragerc --cov-report xml --cov-report term-missing --cov=./src"

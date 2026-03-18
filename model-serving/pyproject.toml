@@ -1,6 +1,16 @@
 [project]
 name = "digit-recognition-model-serving"
+version = "1.0.0"
 
+requires-python = "==3.10.*"
+dependencies = [
+    "common-code[test] @ git+https://github.com/swiss-ai-center/common-code.git@main",
+    "keras==3.1.1",
+    "numpy==1.26.4",
+    "opencv-python==4.9.0.80",
+    "tensorflow==2.16.1"
+
+]
 [tool.pytest.ini_options]
 pythonpath = [".", "src"]
 addopts = "--cov-config=.coveragerc --cov-report xml --cov-report term-missing --cov=./src"

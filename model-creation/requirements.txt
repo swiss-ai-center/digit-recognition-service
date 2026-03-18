@@ -1,3 +1,4 @@
+# @Deprecated: This file is deprecated. Please use pyproject.toml instead.
 dvc[s3]==3.49.0
 flake8==7.0.0
 matplotlib==3.8.3
