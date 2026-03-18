@@ -9,6 +9,7 @@ from common_code.tasks.models import TaskData
 from keras import models
 import cv2
 import numpy as np
+import os
 
 api_description = """
 Recognizes a digit in an image using mnist trained model.
